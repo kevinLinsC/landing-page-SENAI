@@ -1,0 +1,23 @@
+/* figcaption, Button {
+    align-self: center;
+    position: absolute;
+    bottom: 10rem;
+    margin: 0 20%;
+    color: white;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 768px) {
+    figcaption, Button {
+        position: inherit;
+        margin: 0 30%;
+        font-size: inherit;
+    }
+} */
+
+.botaoSaiba {
+    background-color: white;
+    color: #101F62;
+    font-weight: bold;
+    border: 0px;
+}
