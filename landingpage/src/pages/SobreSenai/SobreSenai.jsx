@@ -9,6 +9,7 @@ import Col from 'react-bootstrap/Col'
 const SobreSenai = () => {
   return (
     <div style={{display: 'flex', flexDirection: 'column', justifyItems: 'center'}}>
+        {/* Objetivos do SENAI */}
         <Container className={styles.caixa} style={{backgroundColor: 'white'}}>
             <Col>
                 <h1 className={styles.titulo}>Objetivos do SENAI</h1>
@@ -21,7 +22,8 @@ const SobreSenai = () => {
                     Veja o vídeo a seguir para saber mais sobre a missão do SENAI de qualificar profissionais:
                 </p>
 
-                <div style={{marginBottom: '8%', justifySelf: 'center', width: '60.5%', height: '40vh'}}>
+                {/* Vídeo do SENAI com um margin-bottom maior para separar os conteudos */}
+                <div style={{marginBottom: '8%', justifySelf: 'center', width: '48.5%', height: '40vh'}}>
                     <iframe 
                         width="100%" 
                         height='100%'
@@ -37,6 +39,7 @@ const SobreSenai = () => {
             </Col>
         </Container>
 
+        {/* Surgimento do SENAI */}
         <Container className={styles.caixa} style={{backgroundColor: '#F4F8FF'}}>
             <Col>
                 <h1 className={styles.titulo}>Surgimento do SENAI</h1>
@@ -74,6 +77,7 @@ const SobreSenai = () => {
             </Col>
         </Container>
 
+        {/* Evolução do SENAI */}
         <Container className={styles.caixa} style={{background: 'linear-gradient(180deg, #101F62, #511B9E 90%)'}}>
             <Col>
                 <h1 className={styles.titulo} style={{color: "white"}}>Evolução</h1>
@@ -124,8 +128,9 @@ const SobreSenai = () => {
                     conjunta do SENAI e da FINDES.
                 </p>
 
+                {/* Margin-bottom maior para ser mais agradavel */}
                 <h4 className={styles.anoCard}>2020</h4>
-                <p className={styles.paragrafoBranco}>
+                <p className={styles.paragrafoBranco} style={{marginBottom: '8%'}}>
                     Em 2020 é inaugurado o novo espaço do Instituto Senai de Tecnologia, no SENAI Vitória. No mesmo 
                     ano os cursos técnicos do SENAI passaram a contar com um novo formato: EaD com prática. Na 
                     habilitação técnica, os cursos têm 80º/o da carga on-line e 20%, presencial. Além disso, também 
