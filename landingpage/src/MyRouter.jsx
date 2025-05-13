@@ -5,7 +5,7 @@ import { createBrowserRouter } from "react-router-dom"
 import App from './App.jsx'
 import PaginaErro from './pages/PaginaErro.jsx'
 import LandingPage from './pages/LandingPage.jsx'
-import SobreSenai from "./pages/SobreSenai.jsx"
+import SobreSenai from "./pages/SobreSenai/SobreSenai.jsx"
 
 const router = createBrowserRouter([
     {

@@ -1,0 +1,38 @@
+.caixa {
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+}
+
+.paragrafo {
+    font-size: 1.4rem;
+    margin-bottom: 3%;
+    /* tirar esse margin grande e colocar dps no final de cada um manualmente */
+    text-align: justify;
+}
+
+.paragrafoBranco {
+    font-size: 1.4rem;
+    margin-bottom: 4%;
+    text-align: justify;
+    color: white;
+}
+
+.titulo {
+    font-size: 3rem;
+    justify-self: center;
+    margin: 0px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.anoCard {
+    font-size: 1.5rem;
+    background-color: #F3AB15;
+    width: min-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+}
