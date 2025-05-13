@@ -8,8 +8,8 @@ function App() {
     <>
       <div className='App'>
         <BarraNavegacao />
-        {/* Tirei o margin e o padding só para conseguir mudar manualmente */}
-        <Container style={{margin: '0px', padding: '0px'}}> 
+        {/* Tirei o margin e o padding só para conseguir mudar manualmente style={{margin: '0px', padding: '0px'}} */}
+        <Container> 
           <Outlet />
         </Container>
       </div>

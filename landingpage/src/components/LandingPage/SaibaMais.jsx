@@ -8,6 +8,7 @@ const SaibaMais = () => {
   return (
     <div>
         <Container>
+            {/* Botar imagem como background */}
             <figure className='position-relative'>
                 <img 
                     src="./imagens/homem-mexendo.png" 

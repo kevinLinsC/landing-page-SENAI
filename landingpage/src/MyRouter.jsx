@@ -22,7 +22,7 @@ const router = createBrowserRouter([
                 element: <LandingPage />
             },
             {
-                path: "/Sobre",
+                path: "/sobre",
                 element: <SobreSenai />
             }
         ]

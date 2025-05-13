@@ -1,0 +1,27 @@
+.titulo {
+    font-size: 3rem;
+    justify-self: center;
+    padding-bottom: 2%;
+    margin: 0px;
+}
+
+.paragrafo {
+    font-size: 1.2rem;
+    margin-bottom: 4%;
+    /* mudar isso e colocar no Container */
+}
+
+.titulo4 {
+    font-size: 1.5rem;
+    background-color: #F3AB15;
+    width: min-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.caixa {
+    padding: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 100%;
+}

@@ -21,7 +21,7 @@ const BarraNavegacao = () => {
                 <Navbar.Collapse id='minha-nav'>
                     <Nav className="me-auto">
                         <Nav.Link href="/inicio">Início</Nav.Link>
-                        <Nav.Link href="/cadastra-produto">Cadastro</Nav.Link>
+                        <Nav.Link href="/sobre">Quem somos</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
