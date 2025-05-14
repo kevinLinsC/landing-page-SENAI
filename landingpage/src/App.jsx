@@ -8,7 +8,6 @@ function App() {
     <>
       <div className='App'>
         <BarraNavegacao />
-        {/* Tirei o margin e o padding só para conseguir mudar manualmente  */}
         <Outlet />
       </div>
     </>

@@ -6,11 +6,12 @@ import styles from './PrincipaisCursos.module.css'
 
 const CardCurso = (props) => {
   return (
-    <div style={{maxWidth: '100%', margin: '0', padding: '0'}}>
+    <div style={{minWidth: '100%', maxWidth: '100%', margin: '0', padding: '0'}}>
         <Container className={styles.caixaCard}>
             <Card style={{ width: "100%", height: "40rem"}}>
                 <Card.Img 
                     variant='top'
+                    className={styles.imgCard}
                     src={
                         props.urlImagem != "null"
                         ? props.urlImagem

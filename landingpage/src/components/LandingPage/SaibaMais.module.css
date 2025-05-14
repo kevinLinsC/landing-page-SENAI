@@ -57,6 +57,13 @@
 @media screen and (max-width: 560px) {
     .tituloSenai {
         max-width: 65%;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 335px) {
+    .tituloSenai {
+        max-width: 65%;
         font-size: 2rem;
     }
 }
