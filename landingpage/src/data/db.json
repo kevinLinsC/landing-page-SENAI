@@ -6,8 +6,62 @@
             "titulo": "Técnico em Desenvolvimento de Sistemas",
             "local": "Vitória",
             "modalidade": "Presencial",
+            "turno": "Noturno",
             "cargaHoraria": "1200 horas",
-            "dataInicio": "01/08/2025"
+            "dataInicio": "01/08/2025",
+            "objetivo": "O curso Técnico em Desenvolvimento de Sistemas têm como objetivos desenvolver e programar sistemas computacionais, atendendo normas e padrões de qualidade, usabilidade, integridade e segurança da informação.",
+            "preRequisitos": [
+                ""
+            ],
+            "documentos": [
+                "RG, CNH ou Carteira de Trabalho", 
+                "CPF", 
+                "Título de Eleitor e Comprovante da última votação", 
+                "Comprovante de residência atualizado", "Histórico Escolar do Ensino Médio"
+            ],
+            "conteudo": "Este curso possui 80% de sua carga horária presencial e 20% em EaD."
+        },
+        {
+          "id": "2",
+            "urlImagem": "./imagens/eletrotecnica.png",
+            "titulo": "Técnico em Eletrotécnica",
+            "local": "São Mateus",
+            "modalidade": "Presencial",
+            "turno": "Noturno",
+            "cargaHoraria": "1280 horas",
+            "dataInicio": "01/08/2025",
+            "objetivo": "",
+            "preRequisitos": [
+                ""
+            ],
+            "documentos": [
+                "RG, CNH ou Carteira de Trabalho", 
+                "CPF", 
+                "Título de Eleitor e Comprovante da última votação", 
+                "Comprovante de residência atualizado", "Histórico Escolar do Ensino Médio"
+            ],
+            "conteudo": ""
+        },
+        {
+          "id": "3",
+            "urlImagem": "./imagens/mecanica.png",
+            "titulo": "Técnico em Mecânica",
+            "local": "Serra",
+            "modalidade": "Presencial",
+            "turno": "Noturno",
+            "cargaHoraria": "1200 horas",
+            "dataInicio": "01/08/2025",
+            "objetivo": "O curso Técnico em Mecânica têm como objetivos apoiar a gestão da manutenção, implementar processos de produção e atuar no desenvolvimento de projetos mecânicos e na automação de máquinas, equipamentos e processos mecânicos, atendendo as normas e padrões técnicos, de qualidade, saúde e segurança e de meio ambiente.",
+            "preRequisitos": [
+                ""
+            ],
+            "documentos": [
+                "RG, CNH ou Carteira de Trabalho", 
+                "CPF", 
+                "Título de Eleitor e Comprovante da última votação", 
+                "Comprovante de residência atualizado", "Histórico Escolar do Ensino Médio"
+            ],
+            "conteudo": ""
         }
     ]
 }
