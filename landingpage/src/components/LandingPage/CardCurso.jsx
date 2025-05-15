@@ -15,7 +15,7 @@ const CardCurso = (props) => {
                     src={
                         props.urlImagem != "null"
                         ? props.urlImagem
-                        : "Cade?"
+                        : "/imagens/nao-carrega.jpg"
                     }
                 />
 
@@ -30,6 +30,10 @@ const CardCurso = (props) => {
 
                     <Card.Text>
                         Modalidade: {props.modalidade}
+                    </Card.Text>
+
+                    <Card.Text>
+                        Turno: {props.turno}
                     </Card.Text>
 
                     <Card.Text>

@@ -2,7 +2,7 @@
     "cursos": [
         {
             "id": "1",
-            "urlImagem": "./imagens/Desenvolvimento-sistemas.png",
+            "urlImagem": "/imagens/Desenvolvimento-sistemas.png",
             "titulo": "Técnico em Desenvolvimento de Sistemas",
             "local": "Vitória",
             "modalidade": "Presencial",
@@ -26,7 +26,7 @@
         },
         {
           "id": "2",
-            "urlImagem": "./imagens/eletrotecnica.png",
+            "urlImagem": "/imagens/eletrotecnica.png",
             "titulo": "Técnico em Eletrotécnica",
             "local": "São Mateus",
             "modalidade": "Presencial",
@@ -47,7 +47,7 @@
         },
         {
           "id": "3",
-            "urlImagem": "./imagens/mecanica.png",
+            "urlImagem": "/imagens/mecanica.png",
             "titulo": "Técnico em Mecânica",
             "local": "Serra",
             "modalidade": "Presencial",

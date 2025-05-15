@@ -24,6 +24,7 @@ const PrincipaisCursos = () => {
                     titulo={curso.titulo}
                     local={curso.local}
                     modalidade={curso.modalidade}
+                    turno={curso.turno}
                     cargaHoraria={curso.cargaHoraria}
                     dataInicio={curso.dataInicio}
                     urlImagem={curso.urlImagem}

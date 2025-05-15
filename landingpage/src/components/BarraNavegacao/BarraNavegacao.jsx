@@ -13,7 +13,7 @@ const BarraNavegacao = () => {
             <Container>
                 {/* Logo do site */}
                 <Navbar.Brand href='/inicio'>
-                    <Image src="./logos/SENAI-BRANCA.svg"></Image>
+                    <Image src="/logos/SENAI-BRANCA.svg"></Image>
                 </Navbar.Brand>
 
                 <Navbar.Toggle aria-controls='minha-nav' />

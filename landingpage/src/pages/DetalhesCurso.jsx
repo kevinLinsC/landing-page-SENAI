@@ -1,10 +1,9 @@
-import CardCursoSelecionado from "../components/DetalhesCurso/CursoSelecionado.jsx"
-
+import CardCursoPreco from "../components/DetalhesCurso/CardCursoPreco.jsx"
 
 const DetalhesCurso = () => {
   return (
     <div>
-      <CardCursoSelecionado />
+      <CardCursoPreco />
     </div>
   )
 }

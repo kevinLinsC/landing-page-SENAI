@@ -1,7 +1,5 @@
 import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
 
-import SobreSenai from '../../pages/SobreSenai/SobreSenai.jsx'
 import styles from './SaibaMais.module.css'
 
 const SaibaMais = () => {
