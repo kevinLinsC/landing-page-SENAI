@@ -6,6 +6,7 @@ import App from './App.jsx'
 import PaginaErro from './pages/PaginaErro.jsx'
 import LandingPage from './pages/LandingPage.jsx'
 import SobreSenai from "./pages/SobreSenai/SobreSenai.jsx"
+import DetalhesCurso from "./pages/DetalhesCurso.jsx"
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
             {
                 path: "/sobre",
                 element: <SobreSenai />
+            },
+            {
+                path: "/detalhe-curso/:id",
+                element: <DetalhesCurso />
             }
         ]
     }

@@ -1,10 +1,9 @@
 import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/esm/Button'
 import Card from 'react-bootstrap/Card'
 
-import styles from './PrincipaisCursos.module.css'
+import styles from './CardCursoPreco.module.css'
 
-const CardCurso = (props) => {
+const CardCursoPreco = (props) => {
   return (
     <div style={{minWidth: '100%', maxWidth: '100%', margin: '0', padding: '0'}}>
         <Container className={styles.caixaCard}>
@@ -39,10 +38,6 @@ const CardCurso = (props) => {
                     <Card.Text>
                         Data de início: {props.dataInicio}
                     </Card.Text>
-
-                    <Card.Link href={`/detalhe-curso/${props.id}`}>
-                        <Button>Saiba Mais</Button>
-                    </Card.Link>
                 </Card.Body>
 
             </Card>
@@ -51,4 +46,4 @@ const CardCurso = (props) => {
   )
 }
 
-export default CardCurso
+export default CardCursoPreco

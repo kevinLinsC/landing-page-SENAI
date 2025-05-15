@@ -19,7 +19,10 @@
                 "Título de Eleitor e Comprovante da última votação", 
                 "Comprovante de residência atualizado", "Histórico Escolar do Ensino Médio"
             ],
-            "conteudo": "Este curso possui 80% de sua carga horária presencial e 20% em EaD."
+            "conteudo": "Este curso possui 80% de sua carga horária presencial e 20% em EaD.",
+            "parcela": "18",
+            "precoTotal": "5.022,00",
+            "precoParcela": "279"
         },
         {
           "id": "2",

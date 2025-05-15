@@ -27,3 +27,15 @@ export function useListaCursos() {
     // Retorna a lista de cursos.
     return cursos;
 }
+
+export function useBuscarCursoPorId() {
+    // Faz a requisição com base no id recebido
+    const buscarCursoPorId = async(idCurso) => {
+        const req = await fetch(`${url}/cursos/${idCurso}`);
+        const res = await req.json();
+        console.log("Curso encontrado: ", res);
+        return res;
+    };
+
+    return { buscarCursoPorId };
+}

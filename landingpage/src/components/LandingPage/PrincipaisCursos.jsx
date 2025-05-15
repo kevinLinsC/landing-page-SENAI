@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container'
 
-// Importação do CarCurso.
+// Importação do CardCurso.
 import CardCurso from './CardCurso'
 
 // Importação do css.
@@ -13,7 +13,9 @@ const PrincipaisCursos = () => {
     const cursos = useListaCursos();
 
   return (
-    <div>
+    // style={{backgroundColor: 'white', border: '2px solid red'}}
+    <div className={styles.divInteira}>
+        <h1 style={{fontSize: '3rem', justifySelf: 'center', margin: '0px', paddingTop: '5%', marginBottom: '3%'}}>Principais cursos</h1>
         <Container className={styles.caixa}>
             {cursos.map((curso) => (
                 <CardCurso 
