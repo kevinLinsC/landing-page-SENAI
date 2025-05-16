@@ -95,6 +95,33 @@ const CardCursoPreco = () => {
                 </Card.Body>
             </Card>
         </Container>
+
+        <Container>
+            <Card>
+                <Card.Body>
+                    <h4>Objetivo</h4>
+                    <Card.Text>
+                        {curso.objetivo}
+                    </Card.Text>
+
+                    <h4>Pré-requisitos</h4>
+                    <Card.Text>
+                        {curso.preRequisitos}
+                    </Card.Text>
+
+                    <h4>Documentos</h4>
+                    <Card.Text>
+                        {curso.documentos}
+                    </Card.Text>
+
+                    <h4>Conteúdo</h4>
+                    <Card.Text>
+                        {curso.conteudo}
+                    </Card.Text>
+
+                </Card.Body>
+            </Card>
+        </Container>
     </div>
   )
 }
