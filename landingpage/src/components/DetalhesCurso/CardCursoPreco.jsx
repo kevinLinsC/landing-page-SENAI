@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 // Importação do css.
 import styles from './CardCursoPreco.module.css';
@@ -40,9 +41,9 @@ const CardCursoPreco = () => {
 
     console.log("aqui",curso)
   return (
-    <div style={{minWidth: '100%', maxWidth: '100%', margin: '0', padding: '0'}}>
+    <div className={styles.tudo}>
         <Container className={styles.caixaCard}>
-            <Card style={{ width: "100%", height: "40rem"}}>
+            <Card style={{ width: "100%", height: "50rem", borderRadius: '8px', display: "flex", flexDirection: "column"}}>
                 <Card.Img 
                     variant='top'
                     className={styles.imgCard}
@@ -54,34 +55,30 @@ const CardCursoPreco = () => {
                     alt='Imagem'
                 />
 
-                <Card.Body>
-                    <Card.Title>
+                <Card.Body style={{paddingBottom: '0'}}>
+                    <Card.Title className={styles.tituloCard}>
                         {curso.titulo}
                     </Card.Title>
 
-                    <Card.Text>
-                        Local: {curso.local}
+                    <Card.Text className={styles.textCard}>
+                        <strong>Local:</strong> {curso.local}
                     </Card.Text>
 
-                    <Card.Text>
-                        Modalidade: {curso.modalidade}
+                    <Card.Text className={styles.textCard}>
+                        <strong>Modalidade:</strong> {curso.modalidade}
                     </Card.Text>
 
-                    <Card.Text>
-                        Turno: {curso.turno}
+                    <Card.Text className={styles.textCard}>
+                        <strong>Turno:</strong> {curso.turno}
                     </Card.Text>
 
-                    <Card.Text>
-                        Carga horária: {curso.cargaHoraria}
+                    <Card.Text className={styles.textCard}>
+                        <strong>Carga horária:</strong> {curso.cargaHoraria}
                     </Card.Text>
 
-                    <Card.Text>
-                        Data de início: {curso.dataInicio}
+                    <Card.Text className={styles.textCard}>
+                        <strong>Data de início:</strong> {curso.dataInicio}
                     </Card.Text>
-
-                    {/* <Card.Link href={`/detalhe-curso/${props.id}`}>
-                        <Button>Saiba Mais</Button>
-                    </Card.Link> */}
                 </Card.Body>
                 
                 <Card.Body className={styles.bodyPreco}>
@@ -92,33 +89,54 @@ const CardCursoPreco = () => {
                     <Card.Text className={styles.precoText}>
                         R${curso.precoTotal}
                     </Card.Text>
+
+                    {/* href={`/detalhe-curso/${props.id}`} */}
+                    <Container style={{display: 'flex', justifyContent: 'center', alignContent: 'bottom', marginTop: 'auto', marginBottom: '4%'}}>
+                        <Card.Link style={{textDecoration: 'none', display: 'inline-block'}}>
+                            <Button className={styles.botaoInteresse}>Tenho interesse</Button>
+                        </Card.Link>
+                    </Container>
                 </Card.Body>
             </Card>
         </Container>
 
-        <Container>
-            <Card>
-                <Card.Body>
-                    <h4>Objetivo</h4>
-                    <Card.Text>
+        <Container className={styles.caixaInfo}>
+            <Card style={{padding: '6%'}}>
+                <Card.Body style={{padding: '0%'}}>
+                    <h4 className={styles.tituloInfo}>Objetivo</h4>
+                    <Card.Text className={styles.textInfo}>
                         {curso.objetivo}
                     </Card.Text>
 
-                    <h4>Pré-requisitos</h4>
-                    <Card.Text>
-                        {curso.preRequisitos}
-                    </Card.Text>
+                    {/* Se os o curso não tiver preenchido só ignora (para não dar erro de map). */}
+                    <h4 className={styles.tituloInfo}>Pré-requisitos</h4>
+                    {curso?.preRequisitos?.length > 0 && (
+                        <ul className={styles.textInfoLista}>
+                            {curso.preRequisitos.map((requisito, i) => (
+                                <li className="pb-2" key={i}>{requisito}.</li>
+                            ))}
+                        </ul>
+                    )}
 
-                    <h4>Documentos</h4>
-                    <Card.Text>
-                        {curso.documentos}
-                    </Card.Text>
-
-                    <h4>Conteúdo</h4>
-                    <Card.Text>
-                        {curso.conteudo}
-                    </Card.Text>
-
+                    {/* Se os o curso não tiver preenchido só ignora (para não dar erro de map). */}
+                    <h4 className={styles.tituloInfo}>Documentos</h4>
+                    {curso?.documentos?.length > 0 && (
+                        <ul className={styles.textInfoLista}>
+                            {curso.documentos.map((documento, i) => (
+                                <li className="pb-2" key={i}>{documento}.</li>
+                            ))}
+                        </ul>
+                    )}
+                    
+                    {/* Se os o curso não tiver preenchido só ignora (para não dar erro de map). */}
+                    <h4 className={styles.tituloInfo}>Conteúdo</h4>
+                    {curso?.conteudos?.length > 0 && (
+                        <ul className={styles.textInfoLista}>
+                            {curso.conteudos.map((conteudo, i) => (
+                                <li className="pb-2" key={i}>{conteudo}.</li>
+                            ))}
+                        </ul>
+                    )}
                 </Card.Body>
             </Card>
         </Container>

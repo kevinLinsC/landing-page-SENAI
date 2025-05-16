@@ -1,3 +1,4 @@
+/* Card com o curso */
 .caixa {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -9,6 +10,17 @@
     max-width: none;
 }
 
+.tituloCard {
+    font-size: 1.5rem;
+    padding-bottom: 6%;
+    text-transform: uppercase;
+}
+
+.textCard {
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
 .caixaCard {
     max-width: 100%;
     margin: 0; 
@@ -18,8 +30,28 @@
     padding-bottom: 8%;
 }
 
-.divInteira {
-    background-color: white;
+.botaoSaiba {
+    text-decoration: none;
+    background-color: #101F62;
+    color: white;
+    fill: white;
+    font-weight: bold;
+    max-width: max-content;
+    border: 0px;
+    border-radius: 10px;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.botaoSaiba:hover {
+    background-color: #2029AD;
 }
 
 .imgCard {

@@ -11,7 +11,9 @@
             "dataInicio": "01/08/2025",
             "objetivo": "O curso Técnico em Desenvolvimento de Sistemas têm como objetivos desenvolver e programar sistemas computacionais, atendendo normas e padrões de qualidade, usabilidade, integridade e segurança da informação.",
             "preRequisitos": [
-                ""
+                "Ter idade mínima de 16 anos completos",
+                "Estar matriculado no 2º ano do ensino médio OU ter concluído o ensino médio OU estar matriculado na Educação de Jovens e Adultos (EJA) nível médio OU ter sido aprovado em disciplinas de exames de massa de nível médio",
+                "Ter acesso à internet"
             ],
             "documentos": [
                 "RG, CNH ou Carteira de Trabalho", 
@@ -20,7 +22,26 @@
                 "Comprovante de residência atualizado", 
                 "Histórico Escolar do Ensino Médio"
             ],
-            "conteudo": "Este curso possui 80% de sua carga horária presencial e 20% em EaD.",
+            "conteudos": [
+                "Introdução à Tecnologia da Informação e Comunicação",
+                "Introdução à Indústria 4.0",
+                "Criatividade e Ideação em Projetos de Inovação",
+                "Lógica de Programação",
+                "Fundamentos de Eletroeletrônica Aplicada",
+                "Introdução ao Desenvolvimento de Projetos",
+                "Introdução à Qualidade e Produtividade",
+                "Modelagem de Projetos de Invovação",
+                "Implantação de Sistemas",
+                "Internet das Coisas",
+                "Programação de Aplicativos",
+                "Banco de Dados",
+                "Saúde e Segurança no Trabalho",
+                "Sustentabilidade nos Processos Industriais",
+                "Prototipagem de Negócios Inovadores",
+                "Manutenção de Sistemas",
+                "Teste de Sistemas",
+                "Implementação de Negócios Inovadores"
+            ],
             "parcela": "18",
             "precoTotal": "5.022,00",
             "precoParcela": "279"
@@ -34,9 +55,11 @@
             "turno": "Noturno",
             "cargaHoraria": "1280 horas",
             "dataInicio": "01/08/2025",
-            "objetivo": "",
+            "objetivo": "O curso Técnico em Eletrotécnica têm como objetivos instalar, manter e projetar sistemas elétricos prediais, industriais e de potência, cumprindo legislações vigentes, parâmetros de eficiência energética, normas técnicas, de qualidade, de segurança e saúde e, ainda, ambientais.",
             "preRequisitos": [
-                ""
+                "Ter idade mínima de 16 anos completos",
+                "Estar matriculado no 2º ano do ensino médio OU ter concluído o ensino médio OU estar matriculado na Educação de Jovens e Adultos (EJA) nível médio OU ter sido aprovado em disciplinas de exames de massa de nível médio",
+                "Ter acesso à internet"
             ],
             "documentos": [
                 "RG, CNH ou Carteira de Trabalho", 
@@ -44,7 +67,32 @@
                 "Título de Eleitor e Comprovante da última votação", 
                 "Comprovante de residência atualizado", "Histórico Escolar do Ensino Médio"
             ],
-            "conteudo": "",
+            "conteudos": [
+                "Fundamentos de Eletricidade",
+                "Fundamentos de Sistemas Elétricos",
+                "Criatividade e Ideação em Projetos de Inovação",
+                "Introdução à Tecnologia da Informação e Comunicação",
+                "Saúde e Segurança no Trabalho",
+                "Projetos Elétricos Prediais",
+                "Instalação e Manutenção Elétrica Predial",
+                "Fundamentos de Mecânica",
+                "Introdução à Indústria 4.0",
+                "Introdução à Qualidade e Produtividade",
+                "Introdução ao Desenvolvimento de Projetos",
+                "Instalações e Acionamentos Elétricos Industriais",
+                "Manutenção Elétrica Industrial",
+                "Integração de Sistemas Elétricos Automatizados",
+                "Projetos Elétricos Industriais",
+                "Prototipagem de Negócios Inovadores",
+                "Sustentabilidade nos Processos Industriais",
+                "Eficiência Energética",
+                "Instalações de Sistemas Elétricos de Potência",
+                "Manutenção e Operação de Sistemas Elétricos de Potência",
+                "Projetos de Instalações Elétricas de Potência",
+                "Integração de Sistemas de Energias Renováveis",
+                "Gestão Operacional Integrada",
+                "Implementação de Negócios Inovadores"
+            ],
             "parcela": "18",
             "precoTotal": "5.022,00",
             "precoParcela": "279"
@@ -60,7 +108,9 @@
             "dataInicio": "01/08/2025",
             "objetivo": "O curso Técnico em Mecânica têm como objetivos apoiar a gestão da manutenção, implementar processos de produção e atuar no desenvolvimento de projetos mecânicos e na automação de máquinas, equipamentos e processos mecânicos, atendendo as normas e padrões técnicos, de qualidade, saúde e segurança e de meio ambiente.",
             "preRequisitos": [
-                ""
+                "Ter idade mínima de 16 anos completos",
+                "Estar matriculado no 2º ano do ensino médio OU ter concluído o ensino médio OU estar matriculado na Educação de Jovens e Adultos (EJA) nível médio OU ter sido aprovado em disciplinas de exames de massa de nível médio",
+                "Ter acesso à internet"
             ],
             "documentos": [
                 "RG, CNH ou Carteira de Trabalho", 
@@ -68,7 +118,27 @@
                 "Título de Eleitor e Comprovante da última votação", 
                 "Comprovante de residência atualizado", "Histórico Escolar do Ensino Médio"
             ],
-            "conteudo": "",
+            "conteudos": [
+                "Processos Básicos de Fabricação Mecânica",
+                "Fundamentos da Tecnologia Mecânica",
+                "Introdução a Tecnologia da Informação e Comunicação",
+                "Planejamento e Controle da Produção",
+                "Processos de Fabricação Mecânica",
+                "Saúde e Segurança no Trabalho",
+                "Introdução ao Desenvolvimento de Projetos",
+                "Otimização de Processos de Produção Mecânica",
+                "Introdução a Controladores Lógicos Programáveis",
+                "Desenvolvimento de Sistemas de Automação Mecânica",
+                "Planejamento e Controle da Manutenção",
+                "Criatividade e Ideação em Projetos de Inovação",
+                "Modelagem de Projetos de Inovação",
+                "Sustentabilidade nos processos industriais",
+                "Manutenção Mecânica Aplicada",
+                "Prototipagem de Negócios Inovadores",
+                "Implementação de Negócios Inovadores",
+                "Introdução a Indústria 4.0",
+                "Introdução a Qualidade e Produtividade"
+            ],
             "parcela": "18",
             "precoTotal": "5.022,00",
             "precoParcela": "279"
