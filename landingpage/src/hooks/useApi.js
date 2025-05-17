@@ -28,6 +28,29 @@ export function useListaCursos() {
     return cursos;
 }
 
+export function useListaAssuntos() {
+    // Lista com assuntos
+    const [assuntos, setAssuntos] = useState([]);
+
+    // UseEffect puxando os assuntos da API
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const req = await fetch(`${url}/assuntos`);
+                const assunto = await req.json();
+                console.log(assunto);
+                setAssuntos(assunto);
+            } catch (erro) {
+                console.log(erro.message);
+            }
+        }
+
+        fetchData();
+    }, []);
+
+    return assuntos
+}
+
 export function useBuscarCursoPorId() {
     // Faz a requisição com base no id recebido
     const buscarCursoPorId = async(idCurso) => {
@@ -38,4 +61,24 @@ export function useBuscarCursoPorId() {
     };
 
     return { buscarCursoPorId };
+}
+
+export function useInserirChamado() {
+    // Recebe os dados do chamado e faz o POST para a API.
+    const inserirChamado = async (dados) => {
+        const req = await fetch(`${url}/chamados`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(dados)
+        });
+
+        const res = await req.json();
+        console.log("Chamado inserido: ", res);
+
+        return res;
+    };
+
+    return { inserirChamado };
 }

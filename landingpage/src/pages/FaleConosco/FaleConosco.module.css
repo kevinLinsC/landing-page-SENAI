@@ -1,0 +1,48 @@
+.formulario {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgb(204, 204, 204);
+    padding: 2rem;
+    width: 60%;
+    justify-self: center;
+}
+
+.campo {
+    padding: 15px;
+    margin: 0px;
+}
+
+.botaoEnviar {
+    text-decoration: none;
+    background-color: #101F62;
+    color: white;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 10px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.teste {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+@media screen and (max-width: 992px) {
+    .formulario {
+        padding: 1rem;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .formulario {
+        padding: 0rem;
+        margin: 0;
+        width: 80%;;
+    }
+}

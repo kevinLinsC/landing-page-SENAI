@@ -7,6 +7,7 @@ import PaginaErro from './pages/PaginaErro.jsx'
 import LandingPage from './pages/LandingPage.jsx'
 import SobreSenai from "./pages/SobreSenai/SobreSenai.jsx"
 import DetalhesCurso from "./pages/DetalhesCurso.jsx"
+import FaleConosco from "./pages/FaleConosco/FaleConosco.jsx"
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: "/detalhe-curso/:id",
                 element: <DetalhesCurso />
+            },
+            {
+                path: "/fale-conosco",
+                element: <FaleConosco />
             }
         ]
     }

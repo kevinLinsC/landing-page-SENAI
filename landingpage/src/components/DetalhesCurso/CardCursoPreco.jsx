@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 // Importação do css.
 import styles from './CardCursoPreco.module.css';
 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form";
 
@@ -39,7 +39,14 @@ const CardCursoPreco = () => {
         fetchCurso();
     }, [])
 
-    console.log("aqui",curso)
+    const navigate = useNavigate();
+
+    // Salvando qual o nome do curso foi selecionado no LocalStorage
+    const handleInteresse = () => {
+        localStorage.setItem("cursoSelecionado", JSON.stringify(curso.titulo));;
+        navigate("/fale-conosco")
+    }
+
   return (
     <div className={styles.tudo}>
         <Container className={styles.caixaCard}>
@@ -93,7 +100,7 @@ const CardCursoPreco = () => {
                     {/* href={`/detalhe-curso/${props.id}`} */}
                     <Container style={{display: 'flex', justifyContent: 'center', alignContent: 'bottom', marginTop: 'auto', marginBottom: '4%'}}>
                         <Card.Link style={{textDecoration: 'none', display: 'inline-block'}}>
-                            <Button className={styles.botaoInteresse}>Tenho interesse</Button>
+                            <Button className={styles.botaoInteresse} onClick={handleInteresse}>Tenho interesse</Button>
                         </Card.Link>
                     </Container>
                 </Card.Body>

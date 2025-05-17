@@ -13,8 +13,7 @@ const PrincipaisCursos = () => {
     const cursos = useListaCursos();
 
   return (
-    // style={{backgroundColor: 'white', border: '2px solid red'}}
-    <div className={styles.divInteira}>
+    <div>
         <h1 style={{fontSize: '3rem', justifySelf: 'center', margin: '0px', paddingTop: '5%', marginBottom: '3%'}}>Principais cursos</h1>
         <Container className={styles.caixa}>
             {cursos.map((curso) => (
