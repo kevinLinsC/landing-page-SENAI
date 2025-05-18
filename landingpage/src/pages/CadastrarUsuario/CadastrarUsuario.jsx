@@ -94,6 +94,10 @@ const CadastrarUsuario = () => {
                                     placeholder="Nome Completo*"
                                     {...register("nome", {
                                         required: "O nome é obrigatório",
+                                        pattern: {
+                                            value: /^[A-Za-zÀ-ÿ\s]+$/,
+                                            message: "Nome inválido",
+                                        },
                                         minLength: {
                                             value: 2,
                                             message: "O nome deve conter pelo menos 2 caracteres",
