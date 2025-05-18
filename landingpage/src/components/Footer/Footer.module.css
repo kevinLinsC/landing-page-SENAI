@@ -1,0 +1,60 @@
+.footer {
+    background: linear-gradient(180deg, #2029AD, #101F62 80%);
+    margin: 0px;
+}
+
+.coluna {
+    padding: 0 !important;
+    margin-bottom: 5%;
+}
+
+.imgSenai {
+    width: 75%;
+}
+
+.tituloFooter {
+    color: white;
+    max-width: fit-content;
+    font-size: 2rem;
+    margin-bottom: 4%;
+}
+
+.linkFooter {
+    text-decoration: none;
+    color: white;
+    max-width: fit-content;
+    font-size: 1rem;
+}
+
+.linkFooter:hover {
+    text-decoration: underline;
+}
+
+
+.paragrafoFooter {
+    font-size: 1rem;
+    color: white;
+    max-width: fit-content;
+}
+
+@media screen and (max-width: 992px) {
+    .coluna {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgSenai {
+        width: 40vh;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .imgSenai {
+        width: 100%;
+    }
+
+    .tituloFooter {
+        font-size: 1.5rem;
+    }
+}

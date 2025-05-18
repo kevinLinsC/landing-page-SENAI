@@ -1,4 +1,3 @@
-
 import { createContext, useState, useEffect } from "react";
 
 // Cria o contexto.
@@ -13,13 +12,14 @@ export const AuthProvider = ({ children }) => {
         setUsuarioNome(nome);
     }, [])
 
+    // Se estiver logado salva as informações.
     const login = (dados) => {
-        console.log("Dados: ", dados);
         localStorage.setItem("userName", dados.nome);
         localStorage.setItem("email", dados.email);
         setUsuarioNome(dados.nome);
     };
 
+    // Se deslogar exclui as informações.
     const logout = () => {
         localStorage.removeItem("userName");
         localStorage.removeItem("email");

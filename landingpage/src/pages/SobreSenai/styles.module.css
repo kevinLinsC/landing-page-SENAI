@@ -36,3 +36,28 @@
     border-radius: 10px;
     color: white;
 }
+
+.video {
+    margin-bottom: 8%;
+    justify-self: center;
+    width: 48.5%;
+    height: 40vh;
+}
+
+@media screen and (max-width: 1400px) {
+    .video {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .video {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .video {
+        width: 100%;
+    }
+}

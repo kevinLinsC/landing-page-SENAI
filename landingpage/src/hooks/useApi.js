@@ -146,7 +146,6 @@ export function useVerificaLogin() {
     return { verificaLogin };
 }
 
-
 export function useVerificaEmail() {
     // Verifica se o email já existe na API.
     const verificaEmail = async (email) => {

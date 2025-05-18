@@ -94,7 +94,7 @@ const FaleConosco = () => {
     }
 
   return (
-    <div>
+    <div style={{marginBottom: '8%'}}>
         {/* Fale Conosco explicando o que pode ser feito na tela. */}
         <div className={styles.caixa}>
             <h1 className={styles.titulo}>Fale Conosco</h1>

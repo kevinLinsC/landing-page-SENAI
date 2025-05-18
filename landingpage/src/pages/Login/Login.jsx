@@ -72,7 +72,7 @@ const Login = () => {
     
   return (
     // Div com todo a página.
-    <div className="d-flex justify-content-center align-items-center" style={{height: '93vh'}}>
+    <div className="d-flex justify-content-center align-items-center" style={{height: '94vh'}}>
         {/* Div do formulário. */}
         <div className={styles.formulario}>
             <h1 className={styles.titulo}>Faça Login</h1>

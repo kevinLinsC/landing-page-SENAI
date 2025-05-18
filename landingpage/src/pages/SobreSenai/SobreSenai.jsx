@@ -23,15 +23,14 @@ const SobreSenai = () => {
                 </p>
 
                 {/* Vídeo do SENAI com um margin-bottom maior para separar os conteudos */}
-                <div style={{marginBottom: '8%', justifySelf: 'center', width: '48.5%', height: '40vh'}}>
+                <div className={styles.video}>
                     <iframe 
                         width="100%" 
                         height='100%'
                         src="https://www.youtube.com/embed/9ehdRDOn_Gc?si=LMaAQ40-bTBqENRg" 
                         title="YouTube video player" 
-                        frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
+                        referrerPolicy="strict-origin-when-cross-origin" 
                         allowFullScreen
                     >
                     </iframe>
