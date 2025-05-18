@@ -2,7 +2,7 @@ import React from 'react'
 
 const PaginaErro = () => {
   return (
-    <div>PaginaErro</div>
+    <div>Deu erro ai ô</div>
   )
 }
 

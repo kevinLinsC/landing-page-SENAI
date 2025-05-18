@@ -5,4 +5,5 @@
 .textoNavbar {
     color: white !important;
     text-align: center;
+    font-weight: bold !important; 
 }
