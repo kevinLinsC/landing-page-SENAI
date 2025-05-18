@@ -6,7 +6,12 @@ import Image from "react-bootstrap/Image"
 
 import styles from "./BarraNavegacao.module.css"
 
+import { useContext } from "react"
+import { AuthContext } from "../contexts/UserContext"
+
 const BarraNavegacao = () => {
+    const { usuarioNome, logout } = useContext(AuthContext);
+
   return (
     <div>
         <Navbar className={styles.navbar} expand='lg' data-bs-theme='dark'>
@@ -22,6 +27,22 @@ const BarraNavegacao = () => {
                     <Nav className="me-auto">
                         <Nav.Link href="/inicio">Início</Nav.Link>
                         <Nav.Link href="/sobre">Quem somos</Nav.Link>
+                    </Nav>
+
+                    <Nav className="justify-content-end">
+                        <Navbar.Text style={{color: 'white', marginRight: '5px'}}>
+                            Usuário: {usuarioNome}
+                        </Navbar.Text>
+
+                        {usuarioNome === "Visitante" ? (
+                            <>
+                                <Button href="/login">Entrar</Button>
+                            </>
+                        ) : (
+                            <>
+                                <Button onClick={logout}>Sair</Button>
+                            </>
+                        )}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

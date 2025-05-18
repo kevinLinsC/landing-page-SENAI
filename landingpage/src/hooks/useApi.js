@@ -1,7 +1,8 @@
 // Url da api do arquivo .env
 const url = import.meta.env.VITE_API_URL;
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { AuthContext } from "../components/contexts/UserContext";
 
 export function useListaCursos() {
     // Lista com os cursos.
@@ -52,7 +53,7 @@ export function useListaAssuntos() {
 }
 
 export function useBuscarCursoPorId() {
-    // Faz a requisição com base no id recebido
+    // Faz a requisição com base no id recebido.
     const buscarCursoPorId = async(idCurso) => {
         const req = await fetch(`${url}/cursos/${idCurso}`);
         const res = await req.json();
@@ -81,4 +82,78 @@ export function useInserirChamado() {
     };
 
     return { inserirChamado };
+}
+
+export function useInserirUsuario() {
+    // Recebe os dados do cadastro de usuário e faz o POST para a API.
+    const inserirUsuario = async (dados) => {
+        const req = await fetch(`${url}/usuarios`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "applicaton/json",
+            },
+            body: JSON.stringify(dados)
+        });
+
+        const res = await req.json();
+        console.log("Usuário inserido: ", res);
+
+        return res;
+    };
+
+    return { inserirUsuario };
+}
+
+export function useVerificaLogin() {
+    // Importa o contexto do login.
+    const { login } = useContext(AuthContext);
+
+    // Guarda os usuários.
+    const [usuarios, setUsuarios] = useState([]);
+
+    // Pega os dados de usuários na API.
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const req = await fetch(`${url}/usuarios`);
+                const users = await req.json();
+                setUsuarios(users);
+            } catch (erro) {
+                console.log(erro.message);
+            }
+        }
+
+        fetchData();
+    }, []);
+
+    // Função para verificar se o usuário já existe na API.
+    const verificaLogin = (dados) => {
+        // Verifica se o e-mail está presente na API.
+        const userToFind = usuarios.find((user) => {
+            return user.email === dados.email;
+        });
+
+        // Se o usuário existe, verifica se a senha está correta.
+        if(userToFind != undefined && userToFind.senha == dados.senha) {
+            login(userToFind);
+            console.log("Usuário logado: ", userToFind.nome);
+            return "Logado";
+        } else {
+            return "E-mail ou senha inválidos"
+        }
+    };
+
+    return { verificaLogin };
+}
+
+
+export function useVerificaEmail() {
+    // Verifica se o email já existe na API.
+    const verificaEmail = async (email) => {
+        const req = await fetch(`${url}/usuarios?email=${encodeURIComponent(email)}`);
+        const res = await req.json();
+        return res.length > 0;
+    };
+
+    return { verificaEmail }
 }

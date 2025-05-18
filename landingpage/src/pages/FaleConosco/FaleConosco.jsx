@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+// Importação do react-boostrap
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -8,14 +6,26 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+// Importação do useForm para mexer com o formulário.
+import { useForm } from "react-hook-form";
+
+// Importação do useNavigate e Navigate para mudar de página.
+import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom"
+
+import { useEffect } from "react";
+
+// Importação do contexto.
+import { useContext } from "react"
+import { AuthContext } from "../../components/contexts/UserContext.jsx"
+
+// Importação dos estilos
 import styles from "./FaleConosco.module.css"
 
+// Importação de InserirChamado, ListaAssuntos e ListaCursos
 import { useInserirChamado, useListaAssuntos, useListaCursos } from "../../hooks/useApi";
 
 const FaleConosco = () => {
-    // Pegando o curso que foi selecionado
-    const [curso, setCurso] = useState([]);
-
     const { 
         handleSubmit, 
         formState: {errors},
@@ -24,6 +34,7 @@ const FaleConosco = () => {
         watch
     } = useForm();
 
+    // Observa o campo 'cursoSelected' e pre-seleciona a opção.
     const cursoSelecionado = watch("cursoSelected");
 
     // Se o usuário tiver selecionado um curso antes, pega esse curso e deixa pre-selecionado no campo de cursoSelecionado.
@@ -32,12 +43,11 @@ const FaleConosco = () => {
 
         if(cursoSalvo) {
             const cursoTitulo = JSON.parse(cursoSalvo);
-            setCurso(cursoTitulo);
             setValue("cursoSelected", cursoTitulo);
         }
     }, [])
 
-    // Garante que se o usuário sair da página ou recarregar a página os campos seram limpos.
+    // Garante que se o usuário sair da página ou recarregar a página os campos sejam limpos.
     useEffect(() => {
         const handleBeforeUnload = () => {
             localStorage.removeItem("cursoSelecionado");
@@ -68,7 +78,7 @@ const FaleConosco = () => {
         inserirChamado(dados);
         alert("Chamado cadastrado com sucesso!")
         localStorage.removeItem("cursoSelecionado") // Excluindo o que estava no LocalStorage.
-        navigate("/inicio")
+        navigate("/inicio");
     }
 
     // Caso tenha algum erro mostra no console.
@@ -76,20 +86,31 @@ const FaleConosco = () => {
         console.log("Erros: ", errors);
     };
 
+    // Se o usuário não estiver logado direciona para tela de login.
+    const { usuarioNome } = useContext(AuthContext);
+
+    if (usuarioNome === "Visitante") {
+        return <Navigate to="/login" />
+    }
+
   return (
     <div>
-        <h1 style={{fontSize: '3rem', justifySelf: 'center', margin: '0px', paddingTop: '5%', marginBottom: '3%'}}>Fale Conosco</h1>
-        
-        {curso && (
-            <p>Você está interessado no curso: <strong>{curso}</strong></p>
-        )}
+        {/* Fale Conosco explicando o que pode ser feito na tela. */}
+        <div className={styles.caixa}>
+            <h1 className={styles.titulo}>Fale Conosco</h1>
+            <p className={styles.paragrafo}>
+                Preencha os campos a seguir para entrar em contato com a equipe de atendimento 
+                do SENAI para tirar dúvidas sobre matrículas ou ser notificado quando alguma vaga nova surgir.
+            </p>
+        </div>
 
+        {/* Formulário do Fale Conosco. */}
         <div className={styles.formulario}>
             <Container>
                 <Form onSubmit={handleSubmit(onSubmit, onError)}>
                     <Row>
+                        {/* Campo de nome. */}
                         <Col className={styles.campo} xs={12} sm={12} md={12} lg={6}>
-                            {/* Campo de nome */}
                             <FloatingLabel 
                                 controlId="floatingInputNome"
                                 label="Nome *"
@@ -113,8 +134,8 @@ const FaleConosco = () => {
                             </FloatingLabel>
                         </Col>
 
+                        {/* Campo de e-mail. */}
                         <Col className={styles.campo} xs={12} sm={12} md={12} lg={6}>
-                            {/* Campo de e-mail */}
                             <FloatingLabel
                                 controlId="floatingInputEmail"
                                 label="E-mail *"
@@ -136,10 +157,9 @@ const FaleConosco = () => {
                         </Col>
                     </Row>   
 
-                    
                     <Row>
+                        {/* Campo do assunto. */}
                         <Col className={styles.campo} xs={12} sm={12} md={12} lg={6}>
-                            {/* Campo do assunto */}
                             <FloatingLabel
                                 controlId="floatingSelectAssunto"
                                 label="Tipo do assunto *"
@@ -159,11 +179,13 @@ const FaleConosco = () => {
                                         </option>
                                     ))}
                                 </Form.Select>
+                                {errors.assunto && <p className="error">{errors.assunto.message}</p>}
                             </FloatingLabel>
                         </Col>
 
+                        {/* Campo do curso selecionado anteriormente. */}
                         <Col className={styles.campo} xs={12} sm={12} md={12} lg={6}>
-                            {/* Campo do curso selecionado anteriormente */}
+                            
                             <FloatingLabel
                                 controlId="floatingSelectedCurso"
                                 label="Curso"
@@ -171,8 +193,7 @@ const FaleConosco = () => {
                                 <Form.Select
                                     value={cursoSelecionado}
                                     {...register("cursoSelected", {
-                                        validate: (value) =>
-                                            !value.includes("vazio") || "escolha um curso"
+                                        validate: (value) => !value.includes("vazio") || "Escolha um curso"
                                     })}
                                 >
                                     <option value="vazio">Escolha um curso</option>
@@ -185,15 +206,16 @@ const FaleConosco = () => {
                                         </option>
                                     ))}
                                 </Form.Select>
+                                {errors.cursoSelected && <p className="error">{errors.cursoSelected.message}</p>}
                             </FloatingLabel>
                         </Col>
                     </Row>
 
-                    {/* Campo de mensagem */}
                     <Row>
-                        <Col className={styles.campo} xs={12} sm={12} md={12} lg={12}>
+                        {/* Campo de mensagem. */}
+                        <Col className={styles.campo} xs={12} sm={12} md={12} lg={12}>                   
                             <FloatingLabel
-                                controlId="floatingInputDescricao"
+                                controlId="floatingInputMensagem"
                                 label="Mensagem"
                             >
                                 <Form.Control
@@ -212,13 +234,14 @@ const FaleConosco = () => {
                             </FloatingLabel>
                         </Col>
                     </Row>
-                    <Container style={{display: 'flex', justifyContent: 'center', alignContent: 'bottom', marginTop: 'auto', marginBottom: '4%'}}>
+                    
+                    {/* Botão de enviar o chamado. */}
+                    <Container className={styles.caixaBotao}>
                         <Button type="submit" className={styles.botaoEnviar}>Enviar</Button>
                     </Container>
                 </Form>
             </Container>
         </div>
-        
     </div>
   )
 }

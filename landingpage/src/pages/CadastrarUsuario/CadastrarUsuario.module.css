@@ -1,0 +1,123 @@
+.formulario {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgb(204, 204, 204);
+    padding: 1rem;
+    width: 30%;
+}
+
+.campo {
+    padding: 15px;
+    margin: 0px;
+}
+
+.titulo {
+    font-size: 2.4rem;
+    justify-self: center;
+    margin: 0px;
+    margin-bottom: 5%;
+    margin-top: 4%;
+}
+
+.paragrafo {
+    font-size: 1rem;
+    margin: 0;
+    /* tirar esse margin grande e colocar dps no final de cada um manualmente */
+    justify-self: center;
+    text-align: justify;
+}
+
+.botaoEnviar {
+    text-decoration: none;
+    background-color: #101F62;
+    color: white;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 10px;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.caixaBotao {
+    display: flex;
+    justify-content: center; 
+    align-content: bottom;
+    margin-top: 5%;
+}
+
+.linkCadastro {
+    text-decoration: none;
+    font-weight: bold;
+    color: #101F62;
+}
+
+@media screen and (max-width: 1600px) {
+    .formulario {
+        padding: 1rem;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .formulario {
+        padding: 1rem;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .formulario {
+        padding: 1rem;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .formulario {
+        padding: 1rem;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .formulario {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        width: 80%;;
+    }
+
+    .campo {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .caixaBotao {
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .botaoEnviar {
+        padding-left: 2.1rem;
+        padding-right: 2.1rem;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .botaoEnviar {
+        font-size: 1rem;
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+    }
+
+    .paragrafo {
+        font-size: 0.8rem;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+    }
+}

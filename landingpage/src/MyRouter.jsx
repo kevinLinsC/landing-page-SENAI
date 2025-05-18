@@ -8,6 +8,8 @@ import LandingPage from './pages/LandingPage.jsx'
 import SobreSenai from "./pages/SobreSenai/SobreSenai.jsx"
 import DetalhesCurso from "./pages/DetalhesCurso.jsx"
 import FaleConosco from "./pages/FaleConosco/FaleConosco.jsx"
+import Login from "./pages/Login/Login.jsx"
+import CadastrarUsuario from "./pages/CadastrarUsuario/CadastrarUsuario.jsx"
 
 const router = createBrowserRouter([
     {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
             {
                 path: "/fale-conosco",
                 element: <FaleConosco />
+            },
+            {
+                path: "/login",
+                element: <Login />
+            },
+            {
+                path: "/cadastrar-usuario",
+                element: <CadastrarUsuario />
             }
         ]
     }

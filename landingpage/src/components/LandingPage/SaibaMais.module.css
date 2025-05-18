@@ -24,7 +24,7 @@
 }
 
 .senai {
-    background-image: linear-gradient(hsla(41, 90%, 52%, 0.699), hsla(20, 97%, 51%, 0.699)), url("./imagens/homem-mexendo.png");
+    background-image: linear-gradient(hsla(41, 90%, 52%, 0.699), hsla(20, 97%, 51%, 0.699)), url("/imagens/homem-mexendo.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
